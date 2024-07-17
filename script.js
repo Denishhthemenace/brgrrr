@@ -1,4 +1,4 @@
-// Define available ingredients with their prices and colors
+// Ingredients
 const ingredients = [
     { name: 'Patty', price: 80, color: '#8B4513' },
     { name: 'Cheese', price: 20, color: '#FFD700' },
@@ -15,11 +15,11 @@ const totalPriceElement = document.getElementById('total-price');
 const orderButton = document.getElementById('order-button');
 const burgerPreview = document.getElementById('burger-preview');
 
-// State
+
 let selectedIngredients = [];
 const MAX_INGREDIENTS = 6;
 
-// Create ingredient buttons
+// Ingredient buttons
 ingredients.forEach(ingredient => {
     const button = document.createElement('button');
     button.textContent = `${ingredient.name} - ₹${ingredient.price}`;
@@ -27,7 +27,7 @@ ingredients.forEach(ingredient => {
     ingredientSelector.appendChild(button);
 });
 
-// Add ingredient to the burger
+// Add ingredient
 const addIngredient = (ingredient) => {
     if (selectedIngredients.length < MAX_INGREDIENTS) {
         selectedIngredients.push(ingredient);
@@ -37,7 +37,7 @@ const addIngredient = (ingredient) => {
     }
 };
 
-// Update burger preview
+// Burger preview
 const updateBurgerPreview = () => {
     burgerIngredients.innerHTML = '';
     
@@ -60,7 +60,7 @@ const updateBurgerPreview = () => {
         burgerIngredients.appendChild(element);
     });
 
-    // Show max ingredients message
+    // Max ingredients message
     const maxIngredientsMessage = document.getElementById('max-ingredients-message') || document.createElement('div');
     maxIngredientsMessage.id = 'max-ingredients-message';
     maxIngredientsMessage.textContent = selectedIngredients.length >= MAX_INGREDIENTS ? 
@@ -86,7 +86,7 @@ const removeIngredient = (index) => {
     updateIngredientButtons();
 };
 
-// Update order summary
+// Order summary
 const updateOrderSummary = () => {
     selectedIngredientsList.innerHTML = '';
     let total = 0;
@@ -123,6 +123,6 @@ orderButton.addEventListener('click', () => {
     }
 });
 
-// Initial update
+
 updateBurgerPreview();
 updateIngredientButtons();
