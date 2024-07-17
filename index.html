@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brrrgrrr - Custom Burger Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Bangers&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="brgr.png" alt="Brrrgrrr Logo">
+        </div>
+        <h1>Brrrgrrr</h1>
+        <p>Build Your Perfect Burger</p>
+    </header>
+    <main>
+        <section id="burger-builder">
+            <h2>Burger Builder - Choose what goes into your burger.</h2>
+            <div class="builder-container">
+                <div id="burger-preview">
+                    <div class="bun-top">Bun</div>
+                    <div id="ingredients"></div>
+                    <div class="bun-bottom">Bun</div>
+                </div>
+                <div id="ingredient-selector"></div>
+            </div>
+        </section>
+        <section id="order-summary">
+            <h2><i class="fas fa-receipt"></i> Order Summary</h2>
+            <ul id="selected-ingredients"></ul>
+            <p>Total: ₹<span id="total-price">0</span></p>
+            <button id="order-button">Place Order</button>
+        </section>
+    </main>
+    <!-- <footer>
+        <p>© 2024 Brrrgrrr. All rights reserved. | <i class="fas fa-map-marker-alt"></i> 123 Burger Street, Foodville</p>
+    </footer> -->
+    <script src="script.js"></script>
+</body>
+</html>
